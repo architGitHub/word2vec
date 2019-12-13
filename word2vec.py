@@ -36,7 +36,7 @@ word2vec = Word2Vec(all_words, min_count=2)
 word =  []
 similarity = []
 target = 'united'
-if target in vocabulary:
+if target in word2vec.wv.vocab:
     sim_words = word2vec.wv.most_similar(target)
     for i in sim_words:
         word.append(i[0])
